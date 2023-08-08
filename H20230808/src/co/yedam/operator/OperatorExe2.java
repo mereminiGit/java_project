@@ -18,6 +18,7 @@ public class OperatorExe2 {
 			
 			int menu = Integer.parseInt(scn.nextLine());
 			
+			// 예금
 			if(menu == 1) {
 				System.out.print("입금액을 입력>>> ");
 //				if(balance > 100000 || balance < 0)
@@ -38,7 +39,7 @@ public class OperatorExe2 {
 						System.out.println("잔액은 "+balance+"입니다.");						
 					}
 				}
-			}else if(menu == 2) {
+			}else if(menu == 2) { // 출금
 				System.out.print("출금액을 입력>>> ");
 				int input = Integer.parseInt(scn.nextLine());
 				
@@ -56,9 +57,9 @@ public class OperatorExe2 {
 						System.out.println("잔액은 "+balance+"입니다.");						
 					}
 				}
-			}else if(menu == 3) {
-				System.out.println("잔액은 "+balance+"입니다,");
-			}else if(menu == 4) break;
+			}else if(menu == 3) { // 잔액
+				System.out.println("잔액은 "+balance+"입니다.");
+			}else if(menu == 4) break; // 종료
 			else {
 				System.out.println("입력값은 1, 2, 3, 4입니다.");
 				continue;
