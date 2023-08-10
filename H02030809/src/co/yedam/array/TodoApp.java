@@ -45,13 +45,14 @@ public class TodoApp {
 				break;
 
 			case 2:
-
+				
+				
 			case 3:
 				System.out.print("조회 날짜>> ");
 				String date = sc.nextLine();
 				for (int i = 0; i < todoList.length; i++) {
 					if (todoList[i] != null && date.equals(todoList[i].dueDate)) {
-						System.out.printf("%d, %s", todoList[i].no, todoList[i].todo);
+						System.out.printf("%d, %s\n", todoList[i].no, todoList[i].todo);
 					} else
 						continue;
 				}
