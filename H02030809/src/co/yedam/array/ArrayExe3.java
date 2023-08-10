@@ -1,10 +1,10 @@
 package co.yedam.array;
 
 
-class Student{ // 이름과 점수를 담을 수 있는 공간
-	String name;
-	int score;
-}
+//class Student{ // 이름과 점수를 담을 수 있는 공간
+//	String name;
+//	int score;
+//}
 
 public class ArrayExe3 {
 	public static void main(String[] args) {
