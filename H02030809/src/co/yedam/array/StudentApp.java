@@ -63,21 +63,22 @@ public class StudentApp {
 						System.out.printf("%s는 없는 사람입니다.\n", temp);	
 				 }
 				
-				System.out.printf("%s는 없는 사람입니다.\n", temp);
+//				System.out.printf("%s는 없는 사람입니다.\n", temp);
 				
 				continue;
 				
 			case 3:
 				double tempHeight = 0.0; //Student max = new Student(); / max.height 를 가장 큰 값을 임시적으로 두는 역할 
 				int idx2 = 0;
+				Student max = new Student();
 				
 				for(int i=0; i<students.length; i++) {
-					if(students[i] != null && students[i].height > tempHeight) {
-						tempHeight = students[i].height;
-						idx2 = i;
+					if(students[i] != null && students[i].height > max.height) {
+						max = students[i];
+//						max.name = students[i].name;
 					}else continue;
 				}
-				System.out.printf("키가 가장 큰 학생은 %s, 키는 %.2f입니다.\n", students[idx2].name, students[idx2].height);
+				System.out.printf("키가 가장 큰 학생은 %s, 키는 %.2f입니다.\n", max.name, max.height);
 				continue;
 				
 				/*
