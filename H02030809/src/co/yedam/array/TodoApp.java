@@ -19,21 +19,22 @@ public class TodoApp {
 
 		boolean run = true;
 		Scanner sc = new Scanner(System.in);
-		Todo[] todoList = new Todo[10];
+		Todo[] todoList = new Todo[10]; // 이렇게 하는 작업을 인스턴스
 		for (int i = 0; i < todoList.length; i++) {
 			todoList[i] = new Todo();
 		}
-
+		int idx = 0;
+		
 		while (run) {
 			System.out.println("------------------------------------------");
 			System.out.println("1.등록 | 2.완료 | 3.조회(날짜) | 4.미완료 | 5.종료");
 			System.out.println("------------------------------------------");
 			System.out.print("선택>> ");
 			int selectNo = Integer.parseInt(sc.nextLine());
-
+			
+			
 			switch (selectNo) {
-			case 1:
-				int idx = 0;
+			case 1: 		// 등록: 1 할일 0812 / done false
 				System.out.print("우선순위 Todo 완료날짜>> ");
 				String[] data = sc.nextLine().split(" ");
 				todoList[idx].no = Integer.parseInt(data[0]);
@@ -44,10 +45,20 @@ public class TodoApp {
 				idx++;
 				break;
 
-			case 2:
+			case 2: 		// 완료: 1 2 4 엔터 완료햇다고 하면 1 2 4 상태를 바꿔줌
+				System.out.print("완료된 번호>> ");
+				String[] comNo = sc.nextLine().split(" ");
+
+				for (String noStr : comNo) {
+					for (int i = 0; i < todoList.length; i++) {
+						if(todoList[i] != null && Integer.parseInt(noStr) == todoList[i].no) {
+							todoList[i].done = true;
+						}
+					}
+				}
+				break;
 				
-				
-			case 3:
+			case 3: 		// 조회: 날짜를 입력하면 0812로 등록되어있는 일들을 보여줌
 				System.out.print("조회 날짜>> ");
 				String date = sc.nextLine();
 				for (int i = 0; i < todoList.length; i++) {
@@ -57,7 +68,34 @@ public class TodoApp {
 						continue;
 				}
 				break;
-			case 4:
+				
+			case 4:			// 미완료: false로 되어있는것들 출력
+				// 반복문 todoList.length -1 하면 들어잇는 값이 길이보다 작을 수 잇음
+				/*
+				 * int lnth = 0;
+				 * (int j = 0; j < todoList.length - 1; j++){
+				 * 		if(todoList[i] != null)
+				 * 			lnth++;   --> lnth를 밑에 배열의 조건문에 넣어주면 됨
+				 * }
+				 */ 
+				
+				for (int j = 0; j < todoList.length - 1; j++) {
+					for (int i = 0; i < todoList.length - 1; i++) {
+						Todo tmp = new Todo();
+						if (todoList[i].no > todoList[i + 1].no) {
+							tmp = todoList[i];
+							todoList[i] = todoList[i + 1];
+							todoList[i + 1] = tmp;
+						}
+					}
+				}
+				// 출력.
+				for(int i = 0; i < todoList.length; i++) {
+					if(todoList[i].no != 0 && todoList[i].done == false) {
+						System.out.printf("%d, %s, %s\n", todoList[i].no, todoList[i].todo, todoList[i].dueDate);
+					}
+				}
+				break;
 
 			case 5:
 				run = false;
@@ -67,6 +105,7 @@ public class TodoApp {
 				System.out.println("입력값이 잘못되었습니다.");
 			}
 		}
+		System.out.println("end of prog");
 
 	}
 
