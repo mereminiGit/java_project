@@ -8,7 +8,7 @@ public class FriendMain {
 		// main 실행되는 메소드 / 클래스가 불러지면 가장 먼저 실행됨
 		
 		//String[] 매게 값 
-		System.out.println(args[0] + args[1]);
+//		System.out.println(args[0] + args[1]);
 		// Run configuration 아규먼트에서 값을 넣을때 나오게 하는 값
 		
 		FriendApp.start(); // 정적 메소드

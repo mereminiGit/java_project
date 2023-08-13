@@ -14,7 +14,7 @@ public class CalendarApp {
 
 
 
-	public void showCalendar() {
+	void showCalendar() {
 		// Sun Mon Tue Wed Thr Fri Sat
 //		this.year = year;
 //		this.month = month;
