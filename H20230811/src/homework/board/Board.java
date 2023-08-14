@@ -50,12 +50,14 @@ public class Board {
 		this.writer = writer;
 	}
 
-	
-	// 출력 매소드
+
 	@Override
 	public String toString() {
-		return "title=" + title + ", content=" + content + ", writer=" + writer + "]";
+		return "Board [title=" + title + ", content=" + content + ", writer=" + writer + ", num=" + num + "]";
 	}
+	
+	// 출력 매소드
+	
 	
 	
 }
