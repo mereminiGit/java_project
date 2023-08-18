@@ -43,7 +43,7 @@ public class Friend {
 	
 	
 	public String showInfo() {
-		return "이름은 " + name + " 연락처는 " + phone;
+		return "이름은 " + name + ", 연락처는 " + phone;
 	}
 	
 	
