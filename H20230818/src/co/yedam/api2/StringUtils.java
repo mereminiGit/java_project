@@ -28,19 +28,19 @@ public class StringUtils {
 		
 		if (year > 23) {	
 
-			switch (Integer.parseInt(gen)) {
-			case 1:
+			switch (gen) {
+			case '1':
 				return "남자";
-			case 2:
+			case '2':
 				return "여자";
 			default:
 				return "오류";
 			}
 		} else {
 			switch (gen) {
-			case 3:
+			case '3':
 				return "남자";
-			case 4:
+			case '4':
 				return "여자";
 			default:
 				return "오류";
