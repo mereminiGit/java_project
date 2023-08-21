@@ -1,5 +1,6 @@
 package co.yedam.lombok;
 
+/*
 public class MainExe {
 	public static void main(String[] args) {
 		Student s1 = new Student();
@@ -9,3 +10,5 @@ public class MainExe {
 		System.out.println(s1.toString());
 	}
 }
+
+*/

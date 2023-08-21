@@ -3,19 +3,21 @@ package co.yedam.inheritance;
 public class DmbCellphone extends Cellphone{ // extends로 상속받기
 	// 자식에서만 있는 기능들을 설정
 	
-	// 필드
+	// 필드(자식)
 	private int channel; 
 	
+	// 생성자(자식)
 	public void changeChannel(int channel) {
 		this.channel = channel;
 	}
 	
+	// 메소드(자식)
 	public void turnOnDmb() {
 		System.out.println("DMB를 켭니다.");
 	}
 	
-	// 오버라이딩 - 부모 클래서 메소드 재정의(Overriding)
 	
+	// 오버라이딩 - 부모 클래서 메소드 재정의(Overriding)
 	@Override
 		public void turnOn() {
 			// TODO Auto-generated method stub

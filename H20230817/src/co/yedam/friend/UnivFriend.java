@@ -1,6 +1,7 @@
 package co.yedam.friend;
 
-public class UnivFriend extends Friend{ // 생성자를 생성하지 않으면 오류가 뜸,  없는 기본 생성자를 만드려고 한다. -> 에러
+public class UnivFriend extends Friend{ // 생성자를 생성하지 않으면 오류가 뜸,  
+										// 없는 기본 생성자를 만드려고 한다. -> 에러
 	// 필드
 	private String univ;
 	private String major;

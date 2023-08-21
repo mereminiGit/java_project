@@ -2,12 +2,15 @@ package co.yedam.abstracts;
 
 // 추상클래스 - 인터페이스랑 비슷한 부분이 잇음
 public abstract class Animal {
+	// 필드
 	private String name;
 	
+	// 생성자
 	public Animal(String name) {
 		this.name = name;
 	}
 	
+	// getter, setter 메소드
 	public String getName() {
 		return name;
 	}
