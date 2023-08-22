@@ -16,7 +16,7 @@ public class FriendApp {
 	Scanner sc = new Scanner(System.in);
 	
 	public FriendApp() { // 생성자를 호출하면 실행하게 되라고 loadFile을 안에 넣는것
-		loadFile();
+		loadFile(); 
 	}
 
 	public void start() {
@@ -81,7 +81,7 @@ public class FriendApp {
 	}
 	
 	private void loadFile() {
-		File file = new File("C:/temp/friendList.txt");
+		File file = new File("C:/temp/friendList.txt"); // 파일에 대한 정보를 가져오는 클래스
 		Scanner sc = null;
 		try {
 			sc = new Scanner(file);
