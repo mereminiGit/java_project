@@ -44,18 +44,18 @@ public class UserServiceImpl implements UserService {
 
 	// user이 맞는지 체크
 	@Override
-	public boolean checkLogin(User user) {
+	public User checkLogin(User user) {
 		for (int i = 0; i < userList.size(); i++) {
 			if (userList.get(i).getId().equals(user.getId())) {
 				if (userList.get(i).getPw().equals(user.getPw())) {
 					user.setName( userList.get(i).getName());
 					// 아이디, 비번 일치
-					return true;
+					return userList.get(i);
 				}
 
 			}
 		}
-		return false;
+		return null;
 	}
 
 }

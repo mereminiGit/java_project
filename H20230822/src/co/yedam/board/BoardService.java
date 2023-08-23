@@ -24,6 +24,9 @@ public interface BoardService {
 	// 삭제
 	public boolean remove(int brdNo);
 	
+	// 수정, 삭제시 (글번호 입력하면 작성자가 나오도록)
+	public String getResponseUser(int brdNo);
+	
 	// 상세조회
 	public Board search(int brdNo);
 	
