@@ -136,4 +136,15 @@ public class BoardServiceImpl implements BoardService { // 임플리메이션 //
 		}
 	}
 
+	// 글번호 입력하면 작성자가 나오도록
+	@Override
+	public String getResponseUser(int brdNo) {
+		for(int i = 0; i < boardList.size(); i++) {
+			if(brdNo == boardList.get(i).getBrdNo()) {
+				return boardList.get(i).getBrdWriter();
+			}
+		}
+		return null;
+	}
+
 }
