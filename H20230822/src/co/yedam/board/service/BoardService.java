@@ -1,6 +1,8 @@
-package co.yedam.board;
+package co.yedam.board.service;
 
 import java.util.List;
+
+import co.yedam.board.vo.Board;
 
 // 규칙을 정하기 위해서 인터페이스 생성
 // 하나는 파일에 저장, 하나는 jdbc로 할꺼기 때문에 규칙을 정해서 

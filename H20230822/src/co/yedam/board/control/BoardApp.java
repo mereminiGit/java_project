@@ -1,15 +1,27 @@
-package co.yedam.board;
+package co.yedam.board.control;
 
 import java.util.List;
 import java.util.Scanner;
 
+import co.yedam.board.service.BoardService;
+import co.yedam.board.service.ReplyService;
+import co.yedam.board.service.UserService;
+import co.yedam.board.serviceClass.BoardServiceImpl;
+import co.yedam.board.serviceClass.BoardServiceJdbc;
+import co.yedam.board.serviceClass.ReplyServiceImpl;
+import co.yedam.board.serviceClass.UserServiceImpl;
+import co.yedam.board.serviceClass.UserServicejdbc;
+import co.yedam.board.vo.Board;
+import co.yedam.board.vo.Reply;
+import co.yedam.board.vo.User;
+
 // 파일, jdbc 통합 컨트롤
 public class BoardApp {
 	Scanner sc = new Scanner(System.in);
-	BoardService service = new BoardServiceImpl();
-//	BoardService service = new BoardServiceJdbc();
-	UserService userService = new UserServiceImpl();
-//	UserService userService = new UserServicejdbc();
+//	BoardService service = new BoardServiceImpl();
+	BoardService service = new BoardServiceJdbc();
+//	UserService userService = new UserServiceImpl();
+	UserService userService = new UserServicejdbc();
 //	ReplyService replyService = new ReplyServiceJdbc();
 	String tmpWriter = null;
 

@@ -1,4 +1,4 @@
-package co.yedam.board;
+package co.yedam.board.serviceClass;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,6 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import co.yedam.board.common.Dao;
+import co.yedam.board.service.UserService;
+import co.yedam.board.vo.User;
 
 // UserService 인터페이스 구현 클래스
 public class UserServicejdbc implements UserService{

@@ -1,4 +1,4 @@
-package co.yedam.board;
+package co.yedam.board.serviceClass;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,6 +8,9 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import co.yedam.board.service.BoardService;
+import co.yedam.board.vo.Board;
 
 // 저장하고 불러오고 하는 기능
 public class BoardServiceImpl implements BoardService { // 임플리메이션 // implemetion

@@ -1,10 +1,13 @@
-package co.yedam.board;
+package co.yedam.board.serviceClass;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import co.yedam.board.service.UserService;
+import co.yedam.board.vo.User;
 
 public class UserServiceImpl implements UserService {
 // board_user.txt에서 정보를 읽고 User 정보를 List컬렉션에 저장

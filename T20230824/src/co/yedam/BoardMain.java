@@ -1,8 +1,6 @@
-package co.yedam.board;
+package co.yedam;
 
-import co.yedam.board.control.BoardApp;
-
-public class BoardMainExe {
+public class BoardMain {
 	public static void main(String[] args) {
 		BoardApp app = new BoardApp();
 		app.start();

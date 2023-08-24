@@ -1,4 +1,4 @@
-package co.yedam.board;
+package co.yedam.board.common;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public class Dao {
 	static Connection conn;
 	
 	// 메소드
-	static Connection conn(){ // 메소드가 정적으로 되면 반환하는 값도 정적으로 바꿔야함
+	public static Connection conn(){ // 메소드가 정적으로 되면 반환하는 값도 정적으로 바꿔야함
 		
 		try {
 			Class.forName("oracle.jdbc.OracleDriver"); // oracleDriver 사용하겟다

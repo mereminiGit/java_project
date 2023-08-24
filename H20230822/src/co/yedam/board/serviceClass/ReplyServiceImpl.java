@@ -1,4 +1,4 @@
-package co.yedam.board;
+package co.yedam.board.serviceClass;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,6 +7,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import co.yedam.board.service.ReplyService;
+import co.yedam.board.vo.Reply;
 
 public class ReplyServiceImpl implements ReplyService{
 	
