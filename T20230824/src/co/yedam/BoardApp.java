@@ -109,6 +109,7 @@ public class BoardApp {
 			if (boardList.get(i).getNumber() == Integer.parseInt(number)) {
 				System.out.println(boardList.get(i).showDetail());
 				check = true;
+				break;
 			}
 
 		}
@@ -226,6 +227,7 @@ public class BoardApp {
 		try {
 			FileOutputStream fos = new FileOutputStream("C:/temp/boardList.dat");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			
 			oos.writeObject(boardList);
 
 			oos.flush();
